@@ -10,7 +10,7 @@ let message;
 
 if (sellDroid === null) {
     message = 'Отменено пользователем!'; 
-} else if (sellDroid * pricePerDroid <= credits) {
+} else if (totalPrice <= credits) {
     message = `Вы купили ${sellDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов.`;
 } else {
     message = 'Недостаточно средств на счету!';
