@@ -7,7 +7,7 @@ const checkForSpam = function(message) {
     } else {
         console.log(false);
     }
-    return message;
+    // return message;
 };
 
 

@@ -1,7 +1,7 @@
 'use strict';
 
 
-let input = 0;
+let input;
 let total = 0;
 
 while(input !== null){
