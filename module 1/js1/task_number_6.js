@@ -10,11 +10,11 @@ while(input !== null){
         break;
     }
     console.log(input);
-    if(input != parseInt(input)){
+    if(input != Number(input)){
         alert('Было введено не число, попробуйте еще раз!');
         continue;
     }
-    total = total + parseInt(input);
+    total += Number(input);
 }
 alert(`Общая сумма чисел равна ${total}`);
 

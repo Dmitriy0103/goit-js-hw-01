@@ -1,20 +1,13 @@
 'use strict';
 
 const formatString = function(string) {
-    const countTheSings = string.length;
-    // console.log(countTheSings);
-    if(countTheSings > 40) {
-        console.log(string.slice(0, 40) + '...');
-    } else {
-        console.log(string);
-    }
-    return string;
+      return string.length > 40 ? (string.slice(0, 40) + '...') : string ;
 };
 
-formatString('Curabitur ligula sapien, tincidunt non.');
-formatString('Vestibulum facilisis, purus nec pulvinar iaculis.');
-formatString('Curabitur ligula sapien.');
-formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',);
+console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+console.log(formatString('Curabitur ligula sapien.'));
+console.log(formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',));
 
 
 

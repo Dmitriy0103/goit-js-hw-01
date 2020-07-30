@@ -1,13 +1,11 @@
 'use strict';
 
 const logItems = function(array) {
-    console.log(array);
     let number = 0;
 for (let i = 0; i < array.length; i += 1) {
     number += 1;
-    console.log(number, array[i]);
+    console.log(`'${number} - ${array[i]}'`);
 }
-return logItems;
 };
 
 logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
