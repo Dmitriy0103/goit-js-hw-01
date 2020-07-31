@@ -10,8 +10,7 @@ const products = [
 //   const calculateTotalPrice = function(products, productName) {
 //       for(const product of products){
 //           if(productName === product.name){
-            
-//             console.log(product.price * product.quantity);
+//             return product.price * product.quantity;
 //           }
 //     }
 //   };
@@ -31,7 +30,7 @@ const products = [
 const calculateTotalPrice = function(products, productName) {
     for(let i = 0; i < products.length; i += 1){
         if(products[i].name === productName){
-            console.log(products[i].price * products[i].quantity);
+          return products[i].price * products[i].quantity;
         }
     }
 }

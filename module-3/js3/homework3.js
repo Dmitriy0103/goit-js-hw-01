@@ -1,13 +1,11 @@
 'use strict';
 
 const findBestEmployee = function(employees) {
-    const keys = Object.keys(employees);
     let total = 0;
-    // console.log(keys);
-    for(const key of keys){
-        // console.log(key);
+    for(const key in employees){
+        // console.log(key ,employees[key]);
         if(total < employees[key]){
-            total = employees[key];
+           total = employees[key];
         }
     }
     console.log(total);

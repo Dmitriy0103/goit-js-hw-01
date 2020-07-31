@@ -12,7 +12,10 @@ const inJamaica = 'ямайка';
 const priceInJamaica = 120;
 const deliveryArrangement = prompt('В какую страну вы хотите заказать доставку товара?');
 
-switch (deliveryArrangement.toLowerCase()) {
+if(deliveryArrangement === null){
+  alert("была нажата отмена,попробуйте снова!");
+} else {
+  switch (deliveryArrangement.toLowerCase()) {
     case inChina:
       alert(`Доставка в ${inChina} будет стоить ${priceInChina} кредитов`);
       break;
@@ -36,3 +39,4 @@ switch (deliveryArrangement.toLowerCase()) {
     default:
       alert(`В вашей стране доставка не доступна!`);
     }
+}
