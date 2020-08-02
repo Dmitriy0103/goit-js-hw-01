@@ -7,12 +7,25 @@ const sellDroid = prompt('Какое колличество дроидов вы 
 let totalPrice;
 
 
+// if (sellDroid === null) {
+//     console.log('Отменено пользователем!'); 
+// } else if ((totalPrice = sellDroid * pricePerDroid) <= credits) {
+//     console.log(`Вы купили ${sellDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
+// } else {
+//     console.log('Недостаточно средств на счету!');
+// }
+
 if (sellDroid === null) {
     console.log('Отменено пользователем!'); 
-} else if ((totalPrice = sellDroid * pricePerDroid) <= credits) {
-    console.log(`Вы купили ${sellDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
-} else {
+} else if (totalPrice <= credits){
+    totalPrice = sellDroid * pricePerDroid;
+    // totalPrice <= credits;
+    // console.log(`Вы купили ${sellDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
+    // totalPrice < credits;
     console.log('Недостаточно средств на счету!');
+} else {
+    totalPrice >= credits;
+    console.log(`Вы купили ${sellDroid} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
 }
 
 

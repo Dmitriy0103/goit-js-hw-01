@@ -3,7 +3,6 @@
 const findBestEmployee = function(employees) {
     let total = 0;
     for(const key in employees){
-        // console.log(key ,employees[key]);
         if(total < employees[key]){
            total = employees[key];
         }

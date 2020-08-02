@@ -9,21 +9,23 @@ const products = [
   
   const getAllPropValues = function(arr, prop) {
     let values = [];
-    for(const key of arr){
+    for(const element of arr){
 
-        console.log([key[prop]]);
-
+        if(prop in element){
+          values.push(element[prop]);
+        }
     }
+    return values;
   };
   
   /*
    * Вызовы функции для проверки работоспособности твоей реализации.
    */
-getAllPropValues(products, 'name'); // ['Радар', 'Сканер', 'Дроид', 'Захват']
+console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
   
-getAllPropValues(products, 'quantity'); // [4, 3, 7, 2]
+console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
   
-getAllPropValues(products, 'category'); // []
+console.log(getAllPropValues(products, 'category')); // []
 
 
 //   Напиши функцию getAllPropValues(arr, prop), которая получает массив объектов и имя свойства. 
