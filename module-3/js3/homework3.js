@@ -2,36 +2,38 @@
 
 const findBestEmployee = function(employees) {
     let total = 0;
+    let bestEmployee;
     for(const key in employees){
         if(total < employees[key]){
            total = employees[key];
+           bestEmployee = key;
         }
     }
-    console.log(total);
+    return (`${bestEmployee} : ${total}`);
+
   };
-    findBestEmployee({
+    console.log(findBestEmployee({
       ann: 29,
       david: 35,
       helen: 1,
       lorence: 99,
-    });
+    }));
    // lorence
   
 
-    findBestEmployee({
+    console.log(findBestEmployee({
       poly: 12,
       mango: 17,
       ajax: 4,
-    });
+    }));
  // mango
   
-
-    findBestEmployee({
+    console.log(findBestEmployee({
       lux: 147,
       david: 21,
       kiwi: 19,
       chelsy: 38,
-    });
+    }));
  // lux
 
 

@@ -5,23 +5,23 @@ const countTotalSalary = function(employees) {
  for(const value in employees){
      total += employees[value];
  }
- console.log(total);
+ return total;
   };
 
-countTotalSalary({}); // 0
+console.log(countTotalSalary({})); // 0
   
-    countTotalSalary({
+    console.log(countTotalSalary({
       mango: 100,
       poly: 150,
       alfred: 80,
-    });
+    }));
  // 330
   
-    countTotalSalary({
+    console.log(countTotalSalary({
       kiwi: 200,
       lux: 50,
       chelsy: 150,
-    });
+    }));
  // 400
 
 
