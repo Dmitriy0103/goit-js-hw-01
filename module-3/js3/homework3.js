@@ -9,7 +9,7 @@ const findBestEmployee = function(employees) {
            bestEmployee = key;
         }
     }
-    return (`${bestEmployee} : ${total}`);
+    return bestEmployee;
 
   };
     console.log(findBestEmployee({

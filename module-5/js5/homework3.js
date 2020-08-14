@@ -1,7 +1,7 @@
 'use strict';
 
 class Storage {
-    constructor ([...items]) {
+    constructor (items) {
         this.items = items;
     }
 
@@ -15,7 +15,6 @@ class Storage {
     }
     removeItem(item) {
         for(let i = 0; i < items.length; i++){
-            console.log(items[i]);
            if(this.items[i] === item){
                 this.items.splice(i, 1);
             }
