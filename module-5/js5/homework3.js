@@ -9,9 +9,7 @@ class Storage {
         return this.items;
     }
     addItem(item){
-        this.item = item;
         items.push(item);
-        return this.items;
     }
     removeItem(item) {
         for(let i = 0; i < items.length; i++){
