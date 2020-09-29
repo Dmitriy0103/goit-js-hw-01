@@ -10,22 +10,38 @@ document.addEventListener('DOMContentLoaded', () => {
    const closeModalBtn = document.querySelector('.lightbox__button');
    
 
-   images.map(element => {
-       const listElement = document.createElement('li');
-       listElement.classList.add("gallery__item");
-       const link = document.createElement('a');
-       link.classList.add("gallery__link");
-       link.setAttribute('href', element.original);
-       const creatPictureElem = document.createElement('img');
-       creatPictureElem.classList.add("gallery__image");
-       creatPictureElem.setAttribute('src', element.preview);
-       creatPictureElem.setAttribute('data-source', element.original);
-       creatPictureElem.setAttribute('alt', element.description);
-       listGalery.appendChild(listElement);
-       listElement.appendChild(link);
-       link.appendChild(creatPictureElem);
+//    images.map(element => {
+//        const listElement = document.createElement('li');
+//        listElement.classList.add("gallery__item");
+//        const link = document.createElement('a');
+//        link.classList.add("gallery__link");
+//        link.setAttribute('href', element.original);
+//        const creatPictureElem = document.createElement('img');
+//        creatPictureElem.classList.add("gallery__image");
+//        creatPictureElem.setAttribute('src', element.preview);
+//        creatPictureElem.setAttribute('data-source', element.original);
+//        creatPictureElem.setAttribute('alt', element.description);
+//        listGalery.appendChild(listElement);
+//        listElement.appendChild(link);
+//        link.appendChild(creatPictureElem);
 
-   })
+//    })
+
+      images.map(elem => {
+          listGalery.insertAdjacentHTML('beforeEnd', 
+          `<li class="gallery__item">
+           <a class="gallery__link" href="${elem.original}" >
+               <img
+                class="gallery__image"
+                src="${elem.preview}"
+                 data-source="${elem.original}"
+                 alt="${elem.description}"
+               />
+             </a>
+           </li>`);
+
+      })
+
 
    listGalery.addEventListener('click', onListGalery);
    closeModalBtn.addEventListener('click', onCloseModalBtn);
@@ -43,6 +59,7 @@ function onListGalery() {
 function onCloseModalBtn() {
     openModal.classList.remove('is-open');
     modalImage.setAttribute('src', event.target.getAttribute(''));
+
     window.removeEventListener('keydown', onPressEscape);
 }
 

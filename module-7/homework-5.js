@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const input = document.querySelector('#name-input');
 const span = document.querySelector('#name-output');
 
+const textSubstitution = "незнакомец";
+
 input.addEventListener("input", event => {
-    span.textContent = event.target.value;
-    // input.textContent = "" ? span.textContent = "незнакомец" : span.textContent = event.target.value;
-    console.log();
+    span.textContent =
+    event.target.value === "" ? textSubstitution : event.target.value;
 })
 
 })
