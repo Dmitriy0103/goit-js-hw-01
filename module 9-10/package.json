@@ -1,5 +1,5 @@
 {
-  "name": "webpack-starter-kit",
+  "name": "webpack-module-9-10",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxplanjay/webpack-starter-kit.git"
+    "url": "git+https://github.com/Dmitriy0103/goit-js-hw-01.git"
   },
   "keywords": [],
   "author": "Dmitriy Marenich <GarantP@i.ua>",
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
   },
-  "homepage": "https://github.com/Dmitriy0103/goit-js-hw-01/module 9-10",
+  "homepage": "https://Dmitriy0103.github.io/goit-js-hw-01/module 9-10/build",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
